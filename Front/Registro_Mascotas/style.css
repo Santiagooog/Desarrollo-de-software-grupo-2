@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("huellitas.jpg");
+}
+
+ .form-register{
+    width: 400px;
+    background:#1B2631 ;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: "comic sans ms";
+    color: white;
+    box-shadow: 9px 13px 37px #000;
+ }
+
+ .form-register h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+
+ }
+
+ .controls{
+    width: 100%;
+    background: #1B2631;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 2px solid #2E4053 ;
+    font-family: "comic sans ms";
+    font-size: 20px;
+
+ }
+
+ .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+
+ }
+
+ .form-register a{
+    color: white;
+    text-decoration: none;
+ }
+ .form-register a :hover {
+    color: white;
+    text-decoration: underline;
+ }
+
+ *, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+ }
+
+ .form-register .botons {
+    width: 100%;
+    background: #85929E ;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin:  16px 0;
+    font-size: 16px;
+    border-radius: 12%;
+    box-shadow: 2px 2px 5px #000;
+    transition: all .3s ease-in-out;
+    
+    
+ }
+ 
+ 
+.botons:hover{
+   background-color:  #566573;
+    color: #cdcaeb;
+    box-shadow: 0 0 9px #D5D8DC;
+}
+/*estilizado barra de navegacion*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+  font-family: "comic sans ms", sans-serif;  
+}
+header{
+    width: 100%;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    background-color: #1B2631;
+}
+/*estilo de la lista de enlace*/
+nav ul {
+    list-style: none;
+    background-color:  #2E4053;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    transition: all ease-in-out 250ms;
+
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover{
+    background: #1B2631 ;
+
+}
+
+/*Icono de menu*/
+.hide {
+    font-size: 22px;
+    padding: 16px;
+    background-color: #2E4053 ;
+    color: white;
+    cursor: pointer;
+    /*oculto, que no se muestre por defecto*/
+    display: none;
+}
+/*para que el menu ocupe un 100%*/
+@media (max-width: 768px){
+    ul li {
+        width: 100%;
+        padding: 16%;
+        text-align: left;
+    }
+    /*que se vea el menu mas no las opciones d enavegacion*/
+    .hide{
+        display: block;
+    }
+
+/*en movil este por defecto oculto*/
+    nav ul{
+        display: none;
+
+    }
+   
+}
+ 
+

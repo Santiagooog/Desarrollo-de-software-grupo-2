@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    color: rgb(255, 255, 255);
+    font-family: "calibri";
+}
+
+
+header{
+
+    background: url("annie-spratt-1wAGVmYBxwQ-unsplash.jpg");
+    height: 750px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*confi imagen*/
+section{
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+section h1{
+    font-size: 44px;
+}
+
+.conte{
+    text-align: center;
+
+}
+
+.conte p{
+    font-size: 60px;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+
+
+.conte a {
+color: white;
+text-decoration: none;
+background: #1ABC9C;
+padding: 4px 20px ;
+border-radius: 30px;
+font-size: 30px;
+margin: 10px;
+
+}
+
+.conte a:hover{
+    
+        background-color:#16a3875b;
+         color: #ffffff;
+         box-shadow: 0 0 9px #D5D8DC;
+         transition: all .2s ease-in-out;
+}
