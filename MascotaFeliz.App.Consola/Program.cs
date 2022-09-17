@@ -22,11 +22,12 @@ namespace MascotaFeliz.App.Consola
             //AddDueno();
             //BuscarDueno(5);
             //AddMascota(); 
-            ListarMascotas(); 
+            //ListarMascotas(); 
             //BuscarMascota(2);
             //ListarVeterinariosFiltro();
             //AddVeterinario();
-            //BuscarVeterinario(1);
+            //BuscarVeterinario(6);
+            //ListarVeterinarios();
             //AddHistoria();
             
 
@@ -61,11 +62,11 @@ namespace MascotaFeliz.App.Consola
         {
             var veterinario = new Veterinario
             {
-                Nombres = "Yole",
-                Apellidos = "Garcia", 
-                Direccion = "Calle 178# 96-45",
-                Telefono = "3145685898",
-                TarjetaProfesional = "TP3303"
+                Nombres = "Cami",
+                Apellidos = "Lopez", 
+                Direccion = "Calle 180",
+                Telefono = "3145555555",
+                TarjetaProfesional = "TP4404"
             };
             _repoVeterinario.AddVeterinario(veterinario);
         }
@@ -109,6 +110,18 @@ namespace MascotaFeliz.App.Consola
 
         }
 
+            private static void ListarVeterinarios()
+        {
+            var veterinarios = _repoVeterinario.GetAllVeterinarios();
+            foreach (Veterinario s in veterinarios)
+            {
+                Console.WriteLine(s.Nombres);
+            }
+
+        }
+
+            
+
 
             private static void ListarDuenosFiltro()
         {
@@ -120,7 +133,7 @@ namespace MascotaFeliz.App.Consola
 
         }
 
-       /* private static void ListarVeterinariosFiltro()
+            private static void ListarVeterinariosFiltro()
         {
             var veterinariosM = _repoVeterinario.GetVeterinariosPorFiltro("e");
             foreach (Veterinario p in veterinariosM)
@@ -128,7 +141,7 @@ namespace MascotaFeliz.App.Consola
                 Console.WriteLine(p.Nombres + " " + p.Apellidos);
             }
 
-        }*/
+        }
 
 
         
