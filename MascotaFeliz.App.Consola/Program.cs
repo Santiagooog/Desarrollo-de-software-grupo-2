@@ -18,18 +18,18 @@ namespace MascotaFeliz.App.Consola
         {
             Console.WriteLine("Hola amigos vamos a empezar a trabajar con las tablas");
                        
-            //ListarDuenosFiltro();      
+            //ListarDuenosFiltro();
             //AddDueno();
             //BuscarDueno(5);
-            //AddMascota(); 
+            //AddMascota();
             //ListarMascotas(); 
             //BuscarMascota(2);
             //ListarVeterinariosFiltro();
             //AddVeterinario();
-            //BuscarVeterinario(6);
-            //ListarVeterinarios();
+            //BuscarVeterinario(7);
+            ListarVeterinarios();
             //AddHistoria();
-            
+            //ListarDuenos();
 
         }
 
@@ -37,11 +37,11 @@ namespace MascotaFeliz.App.Consola
         {
             var dueno = new Dueno
             {
-                Nombres = "Liliana",
-                Apellidos = "Perez", 
-                Direccion = "Carrera 128",
-                Telefono = "3135254656",
-                Correo = "lili_anaP@gmail.com"
+                Nombres = "Juan",
+                Apellidos = "Martinez", 
+                Direccion = "Carrera 12a",
+                Telefono = "3201679452",
+                Correo = "martinezjuan@gmail.com"
             };
             _repoDueno.AddDueno(dueno);
         }
@@ -62,11 +62,11 @@ namespace MascotaFeliz.App.Consola
         {
             var veterinario = new Veterinario
             {
-                Nombres = "Cami",
-                Apellidos = "Lopez", 
-                Direccion = "Calle 180",
-                Telefono = "3145555555",
-                TarjetaProfesional = "TP4404"
+                Nombres = "Jesus",
+                Apellidos = "Juarez", 
+                Direccion = "Calle 65",
+                Telefono = "3013216547",
+                TarjetaProfesional = "TP1987"
             };
             _repoVeterinario.AddVeterinario(veterinario);
         }
@@ -115,7 +115,9 @@ namespace MascotaFeliz.App.Consola
             var veterinarios = _repoVeterinario.GetAllVeterinarios();
             foreach (Veterinario s in veterinarios)
             {
-                Console.WriteLine(s.Nombres);
+                Console.WriteLine("hola mundo");
+                Console.WriteLine(s.Nombres +""+ s.Apellidos);
+                
             }
 
         }
@@ -125,7 +127,7 @@ namespace MascotaFeliz.App.Consola
 
             private static void ListarDuenosFiltro()
         {
-            var duenosM = _repoDueno.GetDuenosPorFiltro("nar");
+            var duenosM = _repoDueno.GetDuenosPorFiltro("Liliana");
             foreach (Dueno p in duenosM)
             {
                 Console.WriteLine(p.Nombres + " " + p.Apellidos);
@@ -143,6 +145,15 @@ namespace MascotaFeliz.App.Consola
 
         }
 
+            private static void ListarDuenos()
+        {
+            var duenos = _repoDueno.GetAllDuenos();
+            foreach (Dueno d in duenos)
+            {
+                Console.WriteLine(d.Nombres +" "+ d.Apellidos);
+            }
+
+        }
 
         
         
