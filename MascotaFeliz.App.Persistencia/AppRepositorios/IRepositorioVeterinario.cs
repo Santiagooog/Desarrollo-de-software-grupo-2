@@ -8,7 +8,7 @@ namespace MascotaFeliz.App.Persistencia
 {
     public interface IRepositorioVeterinario
     {
-        IEnumerable<Veterinario> GetAllVeterinarios();
+        IEnumerable<Veterinario> GetAllVeterinarios_();
         Veterinario AddVeterinario(Veterinario veterinario);
         Veterinario UpdateVeterinario(Veterinario veterinario);
         void DeleteVeterinario(int idVeterinario);

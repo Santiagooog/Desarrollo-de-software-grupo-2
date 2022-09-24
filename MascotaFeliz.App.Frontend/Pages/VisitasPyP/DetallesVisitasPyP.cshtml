@@ -1,0 +1,35 @@
+@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesVisitasPyPModel
+@{
+}
+
+<h1>Detalles VisitasPyP</h1>
+
+<div>
+    Id: @Model.visitaPyP.Id
+</div>
+<div>
+    Temperatura: @Model.visitaPyP.Temperatura
+</div>
+<div>
+    Peso: @Model.visitaPyP.Peso
+</div>
+<div>
+    Fecha Visita: @Model.visitaPyP.FechaVisita
+</div>
+<div>
+    Frecuencia Respiratoria: @Model.visitaPyP.FrecuenciaRespiratoria
+</div>
+<div>
+    Frecuencia Cardiaca: @Model.visitaPyP.FrecuenciaCardiaca
+</div>
+<div>
+    Estado Ánimo: @Model.visitaPyP.EstadoAnimo
+</div>
+<div>
+    Id Veterinario: @Model.visitaPyP.IdVeterinario
+</div>
+<div>
+    Recomendaciones: @Model.visitaPyP.Recomendaciones
+</div>
+<a asp-page="./ListaVisitasPyP" class="btn-default">Atras</a>

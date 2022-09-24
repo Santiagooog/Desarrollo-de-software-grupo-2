@@ -1,0 +1,18 @@
+@page
+@model MascotaFeliz.App.Frontend.Pages.EditarHistoriasModel
+@{
+    int historiaId = Model.historia.Id;
+}
+
+<h1>Editar Historia</h1>
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for = "historia.Id" />
+        <label asp-for="historia.FechaInicial"></label>
+        <input asp-for="historia.FechaInicial" class="form-control">
+        <label asp-for="historia.VisitasPyP"></label>
+        <input asp-for="historia.VisitasPyP" class="form-control">
+
+        <button type="submit" class="btn btn-primary">Grabar</button>
+    </div>
+</form>

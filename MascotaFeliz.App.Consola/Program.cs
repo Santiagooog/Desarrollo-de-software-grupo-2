@@ -12,25 +12,25 @@ namespace MascotaFeliz.App.Consola
         private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());
-        //private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
-        //private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
+        private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
+        private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hola amigos vamos a empezar a trabajar con las tablas");
                        
             //ListarDuenosFiltro();
-            //AddDueno();
-            //BuscarDueno(5);
-            //AddMascota();
-            //ListarMascotas(); 
-            //BuscarMascota(2);
+            //AddDueno(); //Funcionando
+            //BuscarDueno(1); Funcionando
+            //AddMascota();//Funcionando
+            //ListarMascotas(); Funcionando
+            //BuscarMascota(2); Funcionando 
             //ListarVeterinariosFiltro();
-            //AddVeterinario();
+            //AddVeterinario();Funcionando
             //BuscarVeterinario(7);
-            ListarVeterinarios();
-            //AddHistoria();
-            //ListarDuenos();
-
+            //ListarVeterinarios();
+            //AddHistoria(); Funcionando
+            //ListarDuenos(); Funcionando
+            //AddVisitaPyP();
         }
 
         private static void AddDueno()
@@ -49,10 +49,10 @@ namespace MascotaFeliz.App.Consola
         {
             var mascota = new Mascota
             {
-                Nombre = "loki",
-                Color = "negro", 
+                Nombre = "Ruffo",
+                Color = "Negro", 
                 Especie = "Perro",
-                Raza = "crillo"
+                Raza = "Criollo"
             };
             _repoMascota.AddMascota(mascota);
         }
@@ -62,24 +62,24 @@ namespace MascotaFeliz.App.Consola
         {
             var veterinario = new Veterinario
             {
-                Nombres = "Jesus",
-                Apellidos = "Juarez", 
-                Direccion = "Calle 65",
-                Telefono = "3013216547",
-                TarjetaProfesional = "TP1987"
+                Nombres = "Santiago",
+                Apellidos = "Lopez", 
+                Direccion = "Calle 15",
+                Telefono = "3015216594",
+                TarjetaProfesional = "TP1872"
             };
             _repoVeterinario.AddVeterinario(veterinario);
         }
 
-       /* private static void AddHistoria()
+        private static void AddHistoria()
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(1990, 04, 12)
+                FechaInicial = new DateTime(2002, 05, 10)
                 
             };
             _repoHistoria.AddHistoria(historia);
-        }*/
+        }
 
 
         private static void BuscarDueno(int idDueno)
@@ -127,7 +127,7 @@ namespace MascotaFeliz.App.Consola
 
             private static void ListarDuenosFiltro()
         {
-            var duenosM = _repoDueno.GetDuenosPorFiltro("Liliana");
+            var duenosM = _repoDueno.GetDuenosPorFiltro("J");
             foreach (Dueno p in duenosM)
             {
                 Console.WriteLine(p.Nombres + " " + p.Apellidos);
@@ -137,7 +137,7 @@ namespace MascotaFeliz.App.Consola
 
             private static void ListarVeterinariosFiltro()
         {
-            var veterinariosM = _repoVeterinario.GetVeterinariosPorFiltro("e");
+            var veterinariosM = _repoVeterinario.GetVeterinariosPorFiltro("A");
             foreach (Veterinario p in veterinariosM)
             {
                 Console.WriteLine(p.Nombres + " " + p.Apellidos);
@@ -153,6 +153,23 @@ namespace MascotaFeliz.App.Consola
                 Console.WriteLine(d.Nombres +" "+ d.Apellidos);
             }
 
+        }
+
+        private static void AddVisitaPyP()
+        {
+            var visitasPyP = new VisitaPyP
+            {
+                Temperatura = 40,
+                Peso = 115, 
+                FrecuenciaRespiratoria = 150,
+                FrecuenciaCardiaca = 150,
+                EstadoAnimo = "Enfermo",
+                FechaVisita = new DateTime(2002, 07, 16),
+                IdVeterinario = 3,
+                Recomendaciones = "Dele mas leche ",
+                //IdHistoria = 1
+            };
+            _repoVisitaPyP.AddVisitaPyP(visitasPyP);
         }
 
         

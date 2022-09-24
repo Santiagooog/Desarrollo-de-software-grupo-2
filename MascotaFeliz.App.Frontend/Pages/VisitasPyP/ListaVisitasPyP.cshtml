@@ -1,0 +1,30 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaVisitasPyPModel
+@{
+}
+<h1>Listado de VisitasPyP</h1>
+<table class="table">
+    @foreach (var visitaPyP in Model.ListaVisitasPyP)
+    {
+        <tr>
+
+            <td>@visitaPyP.Id</td>
+            <td>@visitaPyP.FechaVisita</td>
+            
+            
+            <td>
+                <a class = "btn btn-primary table-btn" asp-page="./DetallesVisitasPyP" asp-route-visitaPyPId="@visitaPyP.Id">
+                Detalle VisitasPyP
+                </a>
+            </td>
+            <td>
+                <a class = "btn btn-primary table-btn" asp-page="./EditarVisitasPyP" asp-route-visitaPyPId="@visitaPyP.Id">
+                Editar VisitasPyP
+                </a>
+            </td>
+            
+        </tr>
+    }
+        <a class = "btn btn-primary table-btn" asp-page="./EditarVisitasPyP" class="btn-default">Adicionar Visita</a>
+
+</table>
